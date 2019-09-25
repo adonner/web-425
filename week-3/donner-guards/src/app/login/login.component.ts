@@ -1,8 +1,8 @@
 /*============================================
-; Title: product-description.component.ts
+; Title: login.component.ts
 ; Author: Adam Donner
 ; Date: 25 September 2019
-; Description:  product-description.component.ts
+; Description:  login.component.ts
 ;===========================================
 */
 
@@ -12,15 +12,18 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'app-product-description',
+  selector: 'app-login',
   template: `
-    <p>
-      product-description works!
-    </p>
+    <h1 class="login">Welcome to the Login Page!</h1>
   `,
-  styles: []
+  styles: [`
+    h1 {
+      color: green;
+      background-color: silver;
+    }
+  `]
 })
-export class ProductDescriptionComponent implements OnInit {
+export class LoginComponent implements OnInit {
 
   constructor() { }
 

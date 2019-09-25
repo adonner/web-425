@@ -1,3 +1,14 @@
+/*============================================
+; Title: home.component.specs.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  home.component.specs.ts
+;===========================================
+*/
+
+
+// start program
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { HomeComponent } from './home.component';
@@ -23,3 +34,4 @@ describe('HomeComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+// end program

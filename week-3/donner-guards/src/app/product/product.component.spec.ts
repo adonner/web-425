@@ -1,3 +1,14 @@
+/*============================================
+; Title: product.component.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  product.component.specs.ts
+;===========================================
+*/
+
+
+// start program
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { ProductComponent } from './product.component';
@@ -23,3 +34,4 @@ describe('ProductComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+// end program

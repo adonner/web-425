@@ -1,3 +1,14 @@
+/*============================================
+; Title: product-detail.component.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  product-detail.component.ts
+;===========================================
+*/
+
+
+// start program
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -34,3 +45,4 @@ export class ProductDetailComponent implements OnInit {
   }
 
 }
+// end program

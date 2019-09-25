@@ -1,3 +1,14 @@
+/*============================================
+; Title: seller-info.component.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  seller-info.component.ts
+;===========================================
+*/
+
+
+// start program
+
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 
@@ -31,3 +42,4 @@ export class SellerInfoComponent implements OnInit {
   }
 
 }
+// end program

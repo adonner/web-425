@@ -1,3 +1,14 @@
+/*============================================
+; Title: login.guard.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  login.guard.ts
+;===========================================
+*/
+
+
+// start program
+
 import { Injectable } from '@angular/core';
 import { CanActivate, Router} from "@angular/router";
 
@@ -15,3 +26,5 @@ export class LoginGuard implements CanActivate {
       return loggedIn;
   } 
 }
+
+// end program

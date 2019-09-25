@@ -1,3 +1,14 @@
+/*============================================
+; Title: e404.component.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  e404.component.ts
+;===========================================
+*/
+
+
+// start program
+
 import { Component, OnInit } from '@angular/core';
 
 @Component({
@@ -29,3 +40,4 @@ export class E404Component implements OnInit {
   }
 
 }
+// end program

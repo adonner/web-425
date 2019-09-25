@@ -8,6 +8,7 @@
 
 
 // start program
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -16,7 +17,6 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'child-routes';
-  productId = 1234;
+  title = 'guards';
 }
 // end program

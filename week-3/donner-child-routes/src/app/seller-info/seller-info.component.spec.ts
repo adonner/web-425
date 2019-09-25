@@ -1,3 +1,14 @@
+/*============================================
+; Title: seller-info.component.spec.ts
+; Author: Adam Donner
+; Date: 25 September 2019
+; Description:  seller-info.component.spec.ts
+;===========================================
+*/
+
+
+// start program
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { SellerInfoComponent } from './seller-info.component';
@@ -23,3 +34,4 @@ describe('SellerInfoComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+// end program
