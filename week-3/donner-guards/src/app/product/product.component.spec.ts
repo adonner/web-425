@@ -1,5 +1,5 @@
 /*============================================
-; Title: product.component.ts
+; Title: product.component.specs.ts
 ; Author: Adam Donner
 ; Date: 25 September 2019
 ; Description:  product.component.specs.ts
