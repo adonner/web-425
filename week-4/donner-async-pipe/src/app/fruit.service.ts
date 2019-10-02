@@ -2,7 +2,7 @@
 ; Title: fruit.service.ts
 ; Author: Adam Donner
 ; Date: 2 October 2019
-; Description:  fruit.service..ts
+; Description:  fruit.service.ts
 ;===========================================
 */
 
