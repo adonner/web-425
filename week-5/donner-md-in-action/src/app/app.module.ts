@@ -1,3 +1,14 @@
+/*============================================
+; Title: app.module.ts
+; Author: Adam Donner
+; Date: 9 October 2019
+; Description:  app.module.ts
+;===========================================
+*/
+
+
+// start program
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { MatCardModule } from '@angular/material/card';
@@ -42,3 +53,4 @@ import { NavBarComponent } from './nav-bar/nav-bar.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+// end program

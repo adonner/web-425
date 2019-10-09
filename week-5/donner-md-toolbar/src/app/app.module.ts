@@ -1,3 +1,14 @@
+/*============================================
+; Title: app.module.ts
+; Author: Adam Donner
+; Date: 9 October 2019
+; Description:  app.module.ts
+;===========================================
+*/
+
+
+// start program
+
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations'
 import { NgModule } from '@angular/core';
@@ -26,3 +37,5 @@ import { AppComponent } from './app.component';
   bootstrap: [AppComponent]
 })
 export class AppModule { }
+
+// end program

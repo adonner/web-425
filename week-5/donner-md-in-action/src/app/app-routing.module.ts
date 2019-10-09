@@ -1,3 +1,14 @@
+/*============================================
+; Title: app-routing.module.ts
+; Author: Adam Donner
+; Date: 9 October 2019
+; Description:  app-routing.module.ts
+;===========================================
+*/
+
+
+// start program
+
 import { NgModule } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
 import { HomeComponent } from './home/home.component';
@@ -14,3 +25,5 @@ const routes: Routes = [
   exports: [RouterModule]
 })
 export class AppRoutingModule { }
+
+// end program

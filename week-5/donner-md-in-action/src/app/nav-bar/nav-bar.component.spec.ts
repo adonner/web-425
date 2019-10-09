@@ -1,3 +1,14 @@
+/*============================================
+; Title: nav-bar.component.specs.ts
+; Author: Adam Donner
+; Date: 2 October 2019
+; Description:  nav-bar.component.specs.ts
+;===========================================
+*/
+
+
+// start program
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { NavBarComponent } from './nav-bar.component';
@@ -23,3 +34,5 @@ describe('NavBarComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// end program

@@ -1,3 +1,13 @@
+/*============================================
+; Title: mail.ts
+; Author: Adam Donner
+; Date: 9 October 2019
+; Description:  main.ts
+;===========================================
+*/
+
+
+// start program
 import { enableProdMode } from '@angular/core';
 import { platformBrowserDynamic } from '@angular/platform-browser-dynamic';
 
@@ -10,3 +20,5 @@ if (environment.production) {
 
 platformBrowserDynamic().bootstrapModule(AppModule)
   .catch(err => console.error(err));
+
+// end program
