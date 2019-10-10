@@ -1,5 +1,19 @@
+<!--
+============================================
+; Title: app.component.html
+; Author: Adam Donner
+; Date: 9 October 2019
+; Description:  app.component.html
+;===========================================
+
+-->
+<!-- Display Navigation Bar-->
 <app-nav-bar></app-nav-bar>
 <div class="parent" fxLayout="row">
+  <!-- Left Pane-->
   <div class="left" fxFlex="10%">Left</div>
-  <div class="right" fxFlex><router-outlet></router-outlet></div> 
+  <!-- Right Pane -->
+  <div class="right" fxFlex>
+    <!-- Router Outlet for application -->
+    <router-outlet></router-outlet></div> 
 </div>
