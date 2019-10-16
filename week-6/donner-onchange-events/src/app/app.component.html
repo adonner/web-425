@@ -1,0 +1,49 @@
+<!--
+============================================
+; Title: app.component.html
+; Author: Adam Donner
+; Date: 16 October 2019
+; Description:  Component lifecycly and OnChange() Events
+;===========================================
+-->
+
+<!--Top Navigation-->
+<app-nav-bar></app-nav-bar>
+
+<!--side Navigation-->
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened class="left">
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]=""> Home </a>
+        <a mat-list-item [routerLink]=""> Create Account </a>
+        <a mat-list-item [routerLink]=""> Contacts </a>
+        <a mat-list-item [routerLink]=""> Create Contact </a>
+        <a mat-list-item [routerLink]=""> Activities </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!--Body-->
+    <mat-sidenav-content>
+      
+        <div class="parent" fxLayout="row">
+            <!-- Right Pane -->
+            <div class="right" fxFlex fxLayout="column">
+              <div class="padding"></div>
+              <div class="box"> 
+                <h2>Parent</h2>
+                  <label>Greeting:</label>  <input type="text" [(ngModel)]="myGreeting">
+                <br/>
+                  <label>User Name: </label> <input type="text" [(ngModel)]="myUser.name">
+              </div>
+              <div class="padding"></div>
+              <div class="box">
+                <app-child [greeting]="myGreeting" [user]="myUser"></app-child>
+              </div>
+            </div> 
+          </div>
+          
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+

@@ -1,0 +1,29 @@
+.parent { 
+    background: deeppink;
+ }
+
+ .right {
+    padding-left: 1rem;
+}
+
+.box {
+    border-style: solid;
+    padding: 5px;
+}
+
+.padding {
+    padding-top: 2rem;
+}
+
+label{
+    display: inline-block;
+    width: 5rem;
+    text-align: right;
+}
+input {
+  display: inline-block;
+}
+  
+.left {
+    background: deeppink;
+}

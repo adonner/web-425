@@ -1,0 +1,42 @@
+<!--
+============================================
+; Title: app.component.html
+; Author: Adam Donner
+; Date: 16 October 2019
+; Description:  app.component.html
+;===========================================
+
+-->
+
+<!--Top Navigation Bar-->
+<app-nav-bar></app-nav-bar>
+
+<!--Side Navigation Bar-->
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened class="left">
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]=""> Home </a>
+        <a mat-list-item [routerLink]=""> Login </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!--Content-->
+    <mat-sidenav-content>
+      <div class="parent" fxLayout="row">
+        <!-- Right Pane -->
+        <div class="right" fxFlex fxLayout="column">
+          <!-- Router Outlet for application -->
+              <div class="quote">
+                AppComponent received: {{priceQuote?.stockSymbol}} {{priceQuote?.lastPrice | currency: 'USD'}}<br/>
+              </div>
+                <!-- the position to drawn the component when routing-->
+              <div class="padding"></div>
+              <div class="quote">
+                <app-price-quote (lastPrice)="priceQuoteHandler($event)"></app-price-quote>
+              </div>
+        </div> 
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>

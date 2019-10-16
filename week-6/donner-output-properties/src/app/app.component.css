@@ -1,0 +1,21 @@
+.parent {
+    min-height: 10px;
+}
+
+.left {
+    background-color: cyan;
+}
+
+.right {
+    background-color: yellow;
+    align-items: center;
+    padding-top: 2rem;
+}
+
+div.quote {
+    border-style: solid;
+}
+
+.padding {
+    padding-top: 2rem;
+}

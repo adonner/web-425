@@ -1,0 +1,28 @@
+.parent {
+    min-height: 10px;
+}
+
+.left {
+    background-color: cyan;
+}
+
+.right {
+    background-color: yellow;
+    align-items: center;
+}
+
+side-navbar-content {
+    position: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #eee;
+  }
+
+
+/* Global */
+.wrapper {
+    width: 100%;
+    margin-top: 10%;
+}
