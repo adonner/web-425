@@ -22,7 +22,7 @@ import {Component, Input, OnChanges, OnInit, SimpleChanges} from '@angular/core'
   `,
   styles: [`
     .child {
-      backround: lightgray;
+      background: lightgrey;
     }
   `
   ]
