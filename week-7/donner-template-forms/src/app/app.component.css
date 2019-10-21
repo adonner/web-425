@@ -1,0 +1,32 @@
+.parent {
+    min-height: 10px;
+}
+
+
+side-navbar-content {
+    position: flex;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+  }
+
+.card {
+    margin: auto;
+}
+
+label{
+    display: inline-block !important;
+    width: 8rem !important;
+    text-align: right !important;
+}
+input {
+  display: inline-block !important;
+}
+
+
+/* Global */
+.wrapper {
+    width: 100%;
+    margin-top: 10%;
+}

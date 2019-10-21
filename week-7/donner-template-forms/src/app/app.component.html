@@ -1,0 +1,57 @@
+<!--
+============================================
+; Title: app.component.html
+; Author: Adam Donner
+; Date: 16 October 2019
+; Description:  app.component.html
+;===========================================
+
+-->
+
+<!--Top Navigation Bar-->
+<app-nav-bar></app-nav-bar>
+
+<!--Side Navigation Bar-->
+<mat-sidenav-container>
+    <mat-sidenav #sidenav mode="side" opened class="left">
+      <mat-nav-list>
+  
+        <a mat-list-item [routerLink]=""> Home </a>
+        <a mat-list-item [routerLink]=""> Login </a>
+  
+      </mat-nav-list>
+    </mat-sidenav>
+
+    <!--Content-->
+    <mat-sidenav-content>
+      <div class="parent" fxLayout="row">
+        <!-- Right Pane -->
+        <div class="right" fxFlex fxLayout="column">
+          <!-- Router Outlet for application -->
+          <div class="card">
+            <mat-card>
+              <mat-card-header class="frm-login-header">
+                <mat-toolbar class="frm-login-toolbar">
+                  Login Form
+                </mat-toolbar>
+              </mat-card-header>
+              <mat-card-content>
+                <form #f="ngForm" (ngSubmit)="onSubmit(f.value)">
+                  <div><label>Username:</label> <input type="text" name="username" ngModel></div>
+                  <div><label>SSN:</label> <input type="text" name="ssn" ngModel></div>
+                  
+                  <div ngModelGroup="passwordsGroup">
+                    <div><label>Password:</label> <input type="text" name="password" ngModel></div>
+                    <div><label>Confirm Password:</label> <input type="text" name="pconfirm" ngModel></div>
+                  </div>
+                </form>
+                <mat-card-actions class="frm-login-actions">
+                    <button mat-raised-button class="btn-login">Submit</button>
+                  </mat-card-actions>
+              </mat-card-content>
+            </mat-card>
+          </div>
+        </div> 
+      </div>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
