@@ -1,0 +1,122 @@
+<mat-card-title class="form-title"></mat-card-title>
+<div class="container">
+  <mat-card class="form">
+    <form #f="ngForm" (ngSubmit)="onSubmit(f.value); f.reset()">
+      <mat-card-content>
+        <h2>Order Form</h2>
+
+        <div ngModelGroup="serviceOrders">
+          <!-- Password Reset -->
+          <div class="passwordReset width inlineBlock">
+            <span class="iconStyle">
+              <i class="fas fa-unlock-alt"></i>
+            </span>
+            <br />
+            <label class="alignCenter" for="passwordReset"
+              >Password Reset</label
+            >
+            <p class="alignCenter">$39.99</p>
+            <mat-checkbox name="password" ngModel></mat-checkbox>
+          </div>
+
+          <!-- Spyware Removal -->
+          <div class="spywareRemoval width inlineBlock">
+            <span class="iconStyle">
+              <i class="fas fa-user-secret"></i>
+            </span>
+            <br />
+            <label for="spywareRemoval">Spyware Removal</label>
+            <p>$99.99</p>
+            <mat-checkbox name="spyware" ngModel></mat-checkbox>
+          </div>
+
+          <!-- RAM upgrade -->
+          <div class="memoryUpgrade width inlineBlock">
+            <span class="iconStyle">
+              <i class="fas fa-memory"></i>
+            </span>
+            <br />
+            <label for="memoryUpgrade">Memory Ugrade</label>
+            <p>$129.99</p>
+            <mat-checkbox name="memory" ngModel></mat-checkbox>
+          </div>
+          <!-- Software Installation -->
+          <div class="softwareInstallation width inlineBlock">
+            <span class="iconStyle">
+              <i class="fas fa-download"></i>
+            </span>
+            <br />
+            <label for="softwareInstallation">Software Installation</label>
+            <p>$49.99</p>
+            <mat-checkbox name="software" ngModel></mat-checkbox>
+          </div>
+          <!-- Tune-Up -->
+          <div class="tuneUp width inlineBlock">
+            <span>
+              <i class="fas fa-tachometer-alt"></i>
+            </span>
+            <br />
+            <label for="tuneUp">Tune-Up</label>
+            <p>$89.99</p>
+            <mat-checkbox name="tuneUp" ngModel></mat-checkbox>
+          </div>
+          <!-- Disc Clean-Up -->
+          <div class="diskCleanUp width inlineBlock">
+            <span>
+              <i class="fas fa-broom"></i>
+            </span>
+            <br />
+            <label for="diskCleanUp">Disk Clean-Up</label>
+            <p>$149.99</p>
+            <mat-checkbox name="cleanUp" ngModel></mat-checkbox>
+          </div>
+          <!-- Keyboard cleaning -->
+          <div class="keyboardCleaning width inlineBlock">
+            <span>
+              <i class="fas fa-keyboard"></i>
+            </span>
+            <br />
+            <label for="keyboardCleaning">Keyboard Cleaning</label>
+            <p>$45.00</p>
+            <mat-checkbox name="keyboard" ngModel></mat-checkbox>
+          </div>
+          <!-- Labor Hours -->
+          <div class="laborHours width inlineBlock">
+            <span>
+              <i class="fas fa-tools"></i>
+            </span>
+            <br />
+            <label for="laborHours">Labor Hours</label>
+            <p>$50.00 per hour</p>
+
+            <select id="labor" name="labor" ngModel>
+              <option value="" disabled selected>Select hours</option>
+              <option value="1">1 Hour</option>
+              <option value="2">2 Hours</option>
+              <option value="3">3 Hours</option>
+              <option value="4">4 Hours</option>
+              <option value="5">5 Hours</option>
+            </select>
+          </div>
+          <!-- Parts -->
+          <mat-form-field>
+            <input
+              type="text"
+              matInput
+              name="parts"
+              placeholder="Additional parts"
+              ngModel
+            />
+          </mat-form-field>
+        </div>
+        <div></div>
+      </mat-card-content>
+      <!-- Submit Button -->
+      <mat-card-actions>
+        <button mat-raised-button color="accent" type="submit">
+          Calculate
+        </button>
+      </mat-card-actions>
+    </form>
+  </mat-card>
+</div>

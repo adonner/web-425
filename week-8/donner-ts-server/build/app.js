@@ -1,3 +1,14 @@
+/*
+============================================
+; Title: app.js
+; Author: Adam Donner
+; Date: 10/25/2019
+; Modified By: Adam Donner
+; Description: app.js
+;===========================================
+*/
+
+// start program
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
@@ -29,3 +40,4 @@ const server = app.listen(3000, "localhost", () => {
     console.log("Listening on port 3000");
 });
 //# sourceMappingURL=app.js.map
+// end program

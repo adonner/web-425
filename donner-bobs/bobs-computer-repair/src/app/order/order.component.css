@@ -1,0 +1,22 @@
+.width {
+    margin: 20px auto;
+    width: 150px;
+    text-align: center;
+  }
+  
+  .form {
+    width: 60%;
+    margin: 0 auto;
+  }
+  
+  h2 {
+    text-align: center;
+  }
+  
+  .width > span {
+    font-size: 3em;
+  }
+  
+  .inlineBlock {
+    display: inline-block;
+  }

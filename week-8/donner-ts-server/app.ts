@@ -1,3 +1,15 @@
+/*
+============================================
+; Title: app.ts
+; Author: Adam Donner
+; Date: 10/25/2019
+; Modified By: Adam Donner
+; Description: app.ts
+;===========================================
+*/
+
+
+// start program
 import * as express from "express";
 
 const app = express();
@@ -40,3 +52,5 @@ app.get('/api/composer/:id', (request, response) => {
 const server = app.listen( 3000, "localhost", () => {
     console.log("Listening on port 3000");
 });
+
+// end program
