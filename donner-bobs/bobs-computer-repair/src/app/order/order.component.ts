@@ -1,78 +1,75 @@
-import { Component, OnInit } from "@angular/core";
-import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material";
-import { InvoiceComponent } from "../invoice/invoice.component";
-import {MatListModule} from '@angular/material/list';
+import { Component, OnInit } from '@angular/core';
+import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
+import { InvoiceComponent } from '../invoice/invoice.component';
+import { MatListModule } from '@angular/material/list';
 import { CloseScrollStrategy } from '@angular/cdk/overlay';
-
+import { NgForm } from '@angular/forms';
+import { ticket, invoiceTotal } from './ticket'
+​
 @Component({
-  selector: "app-order",
-  templateUrl: "./order.component.html",
-  styleUrls: ["./order.component.css"]
+  selector: 'app-order',
+  templateUrl: './order.component.html',
+  styleUrls: ['./order.component.css']
 })
 export class OrderComponent {
-  totalAmount: number;
-  ticket: string[];
+  services: ticket[] = [];
+  totalOrder: invoiceTotal[] = [];
   
-  public order = {
-    password: { name: "", price: null },
-    spyware: { name: "", price: null },
-    memory: { name: "", price: null },
-    software: { name: "", price: null },
-    tuneUp: { name: "", price: null },
-    cleanUp: { name: "", price: null },
-    keyboard: { name: "", price: null },
-    labor: { name: "", price: null },
-    parts: { name: "", price: null },
-    total: { name: "", price: null }
+​
+order = {
+    password: { name: '', price: null },
+    spyware: { name: '', price: null },
+    memory: { name: '', price: null },
+    software: { name: '', price: null },
+    tuneUp: { name: '', price: null },
+    cleanUp: { name: '', price: null },
+    keyboard: { name: '', price: null },
+    labor: { name: '', price: null },
+    parts: { name: '', price: null },
+    total: { name: '', price: null }
   };
-  constructor(private dialog: MatDialog) {}
-
+​
   onSubmit(formData) {
-    if (formData.serviceRequest.password) {
-      this.order.password.name = "Password Reset";
-      const passwordPrice = 39.99;
-      this.order.password.price = passwordPrice;
-      this.ticket[this.order.password.name, this.order.password.price]
-      
-    }
-    if (formData.serviceRequest.spyware) {
-      this.order.spyware.name = "Spyware Removal";
-      const spywarePrice = 99.99;
-      this.order.spyware.price = spywarePrice;
-      
-    }
-    if (formData.serviceRequest.memory) {
-      this.order.memory.name = "RAM Upgrade";
-      this.order.memory.price = 129.99;
-    }
-    if (formData.serviceRequest.software) {
-      this.order.software.name = "Software Installation";
-      this.order.software.price = 49.99;
-    }
-    if (formData.serviceRequest.tuneUp) {
-      this.order.tuneUp.name = "Tune-Up";
-      this.order.tuneUp.price = 89.99;
-    }
-    if (formData.serviceRequest.cleanUp) {
-      this.order.cleanUp.name = "Disk Clean-Up";
-      this.order.cleanUp.price = 149.99;
-    }
-    if (formData.serviceRequest.keyboard) {
-      this.order.keyboard.name = "Keyboard Cleaning";
-      this.order.keyboard.price = 45.0;
-    }
-    if (formData.serviceRequest.labor) {
-      this.order.labor.name = "Labor @ $50/hr";
-      const laborAmount = formData.serviceRequest.labor * 50;
-      this.order.labor.price = laborAmount;
-    }
-    if (formData.serviceRequest.parts) {
-      this.order.parts.name = "Additional Parts";
-      this.order.parts.price = formData.serviceRequest.parts;
-    }
-    if (formData.serviceRequest) {
-      this.order.total.name = "Total";
-      this.order.total.price =
+​
+      if (formData.serviceRequest.password) {
+        this.order.password.price = 39.99;
+        this.services.push({service: 'Password Reset', price: 39.99});
+      }
+      if (formData.serviceRequest.spyware) {
+        this.order.spyware.price = 99.99;
+        this.services.push({service: 'Spyware Removal', price: 99.99});
+      }
+      if (formData.serviceRequest.memory) {
+        this.order.memory.price = 129.99;
+        this.services.push({service: 'RAM Upgrade', price: 129.99});
+      }
+      if (formData.serviceRequest.software) {
+        this.order.software.price = 49.99;
+        this.services.push({service: 'Software Installation', price: 49.99});
+      }
+      if (formData.serviceRequest.tuneUp) {
+        this.order.tuneUp.price = 89.99;
+        this.services.push({service: 'Tune-Up', price: 89.99});
+      }
+      if (formData.serviceRequest.cleanUp) {
+        this.order.cleanUp.price = 149.99;
+        this.services.push({service: 'Disk Clean-up', price: 149.99});
+      }
+      if (formData.serviceRequest.keyboard) {
+        this.order.keyboard.price = 45.00;
+        this.services.push({service: 'Keyboard Cleaning', price: 45.00});
+      }
+      if (formData.serviceRequest.labor) {
+        const laborAmount = formData.serviceRequest.labor * 50;
+        this.order.labor.price = laborAmount;
+        this.services.push({service: 'Labor @ $50/hr', price: this.order.labor.price});
+      }
+      if (formData.serviceRequest.parts) {
+        this.order.parts.price = formData.serviceRequest.parts;
+        this.services.push({service: 'Additional Parts', price: this.order.parts.price});
+      }
+      if (formData.serviceRequest) {
+        this.totalOrder.push({invoiceTotal:    
         this.order.password.price +
         this.order.spyware.price +
         this.order.memory.price +
@@ -81,26 +78,44 @@ export class OrderComponent {
         this.order.cleanUp.price +
         this.order.keyboard.price +
         this.order.labor.price +
-        this.order.parts.price;
-       
-    }
-    console.log(this.order.total.price);
-    console.log(this.ticket)
+        this.order.parts.price
+      })
+      }   
+    console.log(this.services);
+    console.log(this.totalOrder)
   }
+  constructor(private dialog: MatDialog) { // what goes here and how does it link to invoices.ts
+  }
+​
   openDialog() {
     const dialogRef = this.dialog.open(InvoiceComponent, {
-        data: {
-            total: this.totalAmount,
-            order: this.order
-        },
-        disableClose: true,
-        width: "800px"
+      data: {
+        ticket: this.services,
+        invoiceTotal: this.totalOrder
+      },
+      disableClose: true,
+      width: '800px'
     });
-
+​
     dialogRef.afterClosed().subscribe(result => {
-        if (result === "confirm") {
-            console.log("The dialog window has closed!");
-        }
+      if (result === 'confirm') {
+        this.services = [];
+        this.totalOrder = [];
+        this.order = {
+          password: { name: '', price: null },
+          spyware: { name: '', price: null },
+          memory: { name: '', price: null },
+          software: { name: '', price: null },
+          tuneUp: { name: '', price: null },
+          cleanUp: { name: '', price: null },
+          keyboard: { name: '', price: null },
+          labor: { name: '', price: null },
+          parts: { name: '', price: null },
+          total: { name: '', price: null }
+        };
+
+        console.log('The dialog window has closed!');
+      }
     });
-}
+  }
 }

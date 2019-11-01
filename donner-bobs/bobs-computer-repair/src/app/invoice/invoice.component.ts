@@ -7,10 +7,12 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
-  order: string;
+  services: [];
+  totalOrder: [];
 
   constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {
-      this.order = data.order;
+      this.services = data.ticket;
+      this.totalOrder = data.invoiceTotal;
   }
 
   ngOnInit() {
