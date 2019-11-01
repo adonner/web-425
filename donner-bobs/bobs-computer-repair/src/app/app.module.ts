@@ -10,6 +10,7 @@ import { MatInputModule } from '@angular/material/input';
 import { MatCheckboxModule } from '@angular/material/checkbox';
 import { MatDialogModule } from '@angular/material/dialog';
 import {MatIconModule} from '@angular/material/icon';
+import {MatListModule} from '@angular/material/list';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -36,9 +37,13 @@ import { InvoiceComponent } from './invoice/invoice.component';
     MatInputModule,
     MatCheckboxModule,
     MatDialogModule,
-    MatIconModule
+    MatIconModule,
+    MatListModule
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
+  entryComponents: [
+    InvoiceComponent
+  ]
 })
 export class AppModule { }

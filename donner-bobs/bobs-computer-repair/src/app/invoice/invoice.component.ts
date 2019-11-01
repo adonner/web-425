@@ -1,6 +1,5 @@
-import { Component, OnInit, Input } from '@angular/core';
-import { MatDialogRef} from '@angular/material';
-import { OrderComponent} from '../order/order.component'
+import { Component, OnInit, Input, Inject } from '@angular/core';
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 
 @Component({
   selector: 'app-invoice',
@@ -8,17 +7,13 @@ import { OrderComponent} from '../order/order.component'
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
+  order: string;
 
-  @Input() public order;
-
-  constructor(private dialogRef: MatDialogRef<OrderComponent>) { }
-
-  ngOnInit() {
-    console.log(this.order);
+  constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {
+      this.order = data.order;
   }
 
-  close() {
-    this.dialogRef.close();
-};
+  ngOnInit() {
+  }
 
 }

@@ -1,6 +1,8 @@
 import { Component, OnInit } from "@angular/core";
-import { MatDialog, MatDialogConfig } from "@angular/material";
+import { MatDialog, MatDialogConfig, MatDialogRef } from "@angular/material";
 import { InvoiceComponent } from "../invoice/invoice.component";
+import {MatListModule} from '@angular/material/list';
+import { CloseScrollStrategy } from '@angular/cdk/overlay';
 
 @Component({
   selector: "app-order",
@@ -9,7 +11,8 @@ import { InvoiceComponent } from "../invoice/invoice.component";
 })
 export class OrderComponent {
   totalAmount: number;
-
+  ticket: string[];
+  
   public order = {
     password: { name: "", price: null },
     spyware: { name: "", price: null },
@@ -22,19 +25,21 @@ export class OrderComponent {
     parts: { name: "", price: null },
     total: { name: "", price: null }
   };
-  constructor(public dialog: MatDialog) {}
-  ngOnInit() {}
+  constructor(private dialog: MatDialog) {}
 
   onSubmit(formData) {
     if (formData.serviceRequest.password) {
       this.order.password.name = "Password Reset";
       const passwordPrice = 39.99;
       this.order.password.price = passwordPrice;
+      this.ticket[this.order.password.name, this.order.password.price]
+      
     }
     if (formData.serviceRequest.spyware) {
       this.order.spyware.name = "Spyware Removal";
       const spywarePrice = 99.99;
       this.order.spyware.price = spywarePrice;
+      
     }
     if (formData.serviceRequest.memory) {
       this.order.memory.name = "RAM Upgrade";
@@ -80,6 +85,22 @@ export class OrderComponent {
        
     }
     console.log(this.order.total.price);
+    console.log(this.ticket)
   }
-}
+  openDialog() {
+    const dialogRef = this.dialog.open(InvoiceComponent, {
+        data: {
+            total: this.totalAmount,
+            order: this.order
+        },
+        disableClose: true,
+        width: "800px"
+    });
 
+    dialogRef.afterClosed().subscribe(result => {
+        if (result === "confirm") {
+            console.log("The dialog window has closed!");
+        }
+    });
+}
+}
