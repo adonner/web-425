@@ -69,17 +69,17 @@ order = {
         this.services.push({service: 'Additional Parts', price: this.order.parts.price});
       }
       if (formData.serviceRequest) {
-        this.totalOrder.push({invoiceTotal:    
-        this.order.password.price +
-        this.order.spyware.price +
-        this.order.memory.price +
-        this.order.software.price +
-        this.order.tuneUp.price +
-        this.order.cleanUp.price +
-        this.order.keyboard.price +
-        this.order.labor.price +
-        this.order.parts.price
-      })
+        this.totalOrder.push({sum: 'Total', invoiceTotal:    
+          this.order.password.price +
+          this.order.spyware.price +
+          this.order.memory.price +
+          this.order.software.price +
+          this.order.tuneUp.price +
+          this.order.cleanUp.price +
+          this.order.keyboard.price +
+          this.order.labor.price +
+          this.order.parts.price
+        })
       }   
     console.log(this.services);
     console.log(this.totalOrder)

@@ -10,6 +10,7 @@ export class ticket {
 }
 
 export class invoiceTotal {
+    sum: string;
     invoiceTotal: number;
 }
 

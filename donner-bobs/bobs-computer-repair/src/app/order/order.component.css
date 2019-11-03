@@ -5,18 +5,36 @@
   }
   
   .form {
-    width: 60%;
+    width: 50%;
+    padding-bottom: 5em;
     margin: 0 auto;
   }
   
   h2 {
-    text-align: center;
-  }
-  
-  .width > span {
-    font-size: 3em;
+    text-align: left;
+    padding: 5px;
   }
   
   .inlineBlock {
     display: inline-block;
+  }
+
+  .padding {
+    padding: 10px;
+  }
+  .padding-services {
+    padding-right: 50px;
+    padding-left: 25px;
+  }
+  
+  .padding-button {
+    padding-bottom: 10rem;
+  }
+
+  .right {
+    float: right;
+  }
+
+  .top {
+    padding-top: 25px;
   }

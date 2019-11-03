@@ -1,5 +1,8 @@
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
+import { getLocaleDateFormat } from '@angular/common';
+import { DatePipe } from '@angular/common';
+
 
 @Component({
   selector: 'app-invoice',
@@ -9,6 +12,8 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 export class InvoiceComponent implements OnInit {
   services: [];
   totalOrder: [];
+  today: number = Date.now();
+  
 
   constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {
       this.services = data.ticket;

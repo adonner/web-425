@@ -1,13 +1,15 @@
-<h2 mat-dialog-title>Services</h2>
+<h2 mat-dialog-title>Invoice Summary</h2>
 <div mat-dialog-content>
+  Date: {{ today | date }}
     <mat-list>
       <mat-list-item *ngFor="let services of services">
         {{ services.service }}
-        {{ services.price }}
+        {{ services.price | currency }}
       </mat-list-item>
 
       <mat-list-item *ngFor="let totalOrder of totalOrder">
-          {{ totalOrder.invoiceTotal.toFixed(2) }}
+        {{ totalOrder.sum }}
+          {{ totalOrder.invoiceTotal | currency }}
       </mat-list-item>
     </mat-list>
 </div>
@@ -15,3 +17,7 @@
 <div mat-dialog-actions align="end">
     <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial>Close Dialog</button>
 </div>
+
+<script>
+  new Date().toDateString()
+</script>
