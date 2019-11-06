@@ -1,13 +1,16 @@
 <h2 mat-dialog-title>Invoice Summary</h2>
 <mat-card>
 <div mat-dialog-content>
+  <!-- Date output -->
   Date: {{ today | date }}
     <table>
+      <!-- Output array of selected services -->
       <tr *ngFor="let services of services">
         <td>{{ services.service }}</td>
         <td>{{ services.price | currency }}</td>
       </tr>
       <br>
+      <!-- If services total is over zero output the total of charges -->
       <tr *ngFor="let services of services">
           <td *ngIf="services.total > 0">Total Charges</td>
           <td *ngIf="services.total > 0">{{ services.total | currency }}</td>
