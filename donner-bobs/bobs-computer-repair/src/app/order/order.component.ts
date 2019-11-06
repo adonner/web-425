@@ -36,7 +36,7 @@ order = {
     labor: { price: null },
     total: { price: null }
   };
-​
+​   // On submit button check for selected services and write to array.
   onSubmit(formData) {
 ​
       if (formData.serviceRequest.password) {
@@ -76,6 +76,7 @@ order = {
         this.order.labor.price = laborAmount;
         this.services.push({service: 'Labor @ $50/hr', price: this.order.labor.price, total: 0});
       }
+      // add results of if statement and write to total.
       if (formData.serviceRequest) {
         this.services.push({service: null, price: null, total:    
           this.order.password.price +
@@ -103,7 +104,7 @@ order = {
       disableClose: true,
       width: '800px'
     });
-​
+​ // clear array and values in order.
     dialogRef.afterClosed().subscribe(result => {
       if (result === 'confirm') {
         this.services = [];

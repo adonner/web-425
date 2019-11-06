@@ -22,12 +22,14 @@ import { DatePipe } from '@angular/common';
   styleUrls: ['./invoice.component.css']
 })
 export class InvoiceComponent implements OnInit {
+  // Declare services array
   services: [];
+  // Date
   today: number = Date.now();
   
 
-  constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {
-      this.services = data.ticket;
+  constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {  
+    this.services = data.ticket;
   }
 
   ngOnInit() {
