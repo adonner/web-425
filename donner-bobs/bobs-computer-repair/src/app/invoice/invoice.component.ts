@@ -12,9 +12,6 @@
 
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
-import { getLocaleDateFormat } from '@angular/common';
-import { DatePipe } from '@angular/common';
-
 
 @Component({
   selector: 'app-invoice',
