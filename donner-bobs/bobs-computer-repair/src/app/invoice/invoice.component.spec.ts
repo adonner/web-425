@@ -1,3 +1,15 @@
+/*============================================
+; Title: invoice.component.specs.ts
+; Author: Adam Donner
+; Date: 6 November 2019
+; Description:  invoice.component.specs.ts
+;===========================================
+*/
+
+
+// start program
+
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { InvoiceComponent } from './invoice.component';
@@ -23,3 +35,5 @@ describe('InvoiceComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// end program

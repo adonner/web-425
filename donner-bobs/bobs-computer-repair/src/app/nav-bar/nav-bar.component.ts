@@ -1,7 +1,7 @@
 /*============================================
 ; Title: nav-bar.component.ts
 ; Author: Adam Donner
-; Date: 21 October 2019
+; Date: 6 November 2019
 ; Description:  nav-bar.component.ts
 ;===========================================
 */

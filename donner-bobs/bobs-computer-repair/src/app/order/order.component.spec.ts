@@ -1,3 +1,15 @@
+/*============================================
+; Title: order.component.specs.ts
+; Author: Adam Donner
+; Date: 6 November 2019
+; Description:  order.component.specs.ts
+;===========================================
+*/
+
+
+// start program
+
+
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { OrderComponent } from './order.component';
@@ -23,3 +35,5 @@ describe('OrderComponent', () => {
     expect(component).toBeTruthy();
   });
 });
+
+// end program

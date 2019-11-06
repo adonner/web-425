@@ -1,3 +1,15 @@
+/*============================================
+; Title: app.component.ts
+; Author: Adam Donner
+; Date: 6 November 2019
+; Description:  app.component.ts
+;===========================================
+*/
+
+
+// start program
+
+
 import { Component } from '@angular/core';
 
 @Component({
@@ -8,3 +20,5 @@ import { Component } from '@angular/core';
 export class AppComponent {
   title = 'bobs-computer-repair';
 }
+
+// end program

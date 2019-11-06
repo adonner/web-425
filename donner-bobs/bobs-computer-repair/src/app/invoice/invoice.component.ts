@@ -1,3 +1,15 @@
+/*============================================
+; Title: invoice.component.ts
+; Author: Adam Donner
+; Date: 6 November 2019
+; Description:  invoice.component.ts
+;===========================================
+*/
+
+
+// start program
+
+
 import { Component, OnInit, Input, Inject } from '@angular/core';
 import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material';
 import { getLocaleDateFormat } from '@angular/common';
@@ -22,3 +34,4 @@ export class InvoiceComponent implements OnInit {
   }
 
 }
+// end program

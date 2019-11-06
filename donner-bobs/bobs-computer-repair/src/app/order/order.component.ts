@@ -1,9 +1,18 @@
+/*============================================
+; Title: order.component.ts
+; Author: Adam Donner
+; Date: 6 November 2019
+; Description:  order.component.ts
+;===========================================
+*/
+
+
+// start program
+
+
 import { Component, OnInit } from '@angular/core';
-import { MatDialog, MatDialogConfig, MatDialogRef } from '@angular/material';
+import { MatDialog } from '@angular/material';
 import { InvoiceComponent } from '../invoice/invoice.component';
-import { MatListModule } from '@angular/material/list';
-import { CloseScrollStrategy } from '@angular/cdk/overlay';
-import { NgForm } from '@angular/forms';
 import { ticket } from './ticket'
 ​
 @Component({
@@ -116,3 +125,4 @@ order = {
     });
   }
 }
+// end program
