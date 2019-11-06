@@ -1,23 +1,22 @@
 <h2 mat-dialog-title>Invoice Summary</h2>
+<mat-card>
 <div mat-dialog-content>
   Date: {{ today | date }}
-    <mat-list>
-      <mat-list-item *ngFor="let services of services">
-        {{ services.service }}
-        {{ services.price | currency }}
-      </mat-list-item>
+    <table>
+      <tr *ngFor="let services of services">
+        <td>{{ services.service }}</td>
+        <td>{{ services.price | currency }}</td>
+      </tr>
+      <br>
+      <tr *ngFor="let services of services">
+          <td *ngIf="services.total > 0">Total Charges</td>
+          <td *ngIf="services.total > 0">{{ services.total | currency }}</td>
+      </tr>
+    </table>
 
-      <mat-list-item *ngFor="let totalOrder of totalOrder">
-        {{ totalOrder.sum }}
-          {{ totalOrder.invoiceTotal | currency }}
-      </mat-list-item>
-    </mat-list>
+
 </div>
-<hr/>
+</mat-card>
 <div mat-dialog-actions align="end">
     <button mat-raised-button matDialogClose="confirm" color="accent" cdkFocusInitial>Close Dialog</button>
 </div>
-
-<script>
-  new Date().toDateString()
-</script>

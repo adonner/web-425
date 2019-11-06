@@ -38,3 +38,7 @@
   .top {
     padding-top: 25px;
   }
+
+  .mat-raised-button {
+    background: #2286c3;
+}

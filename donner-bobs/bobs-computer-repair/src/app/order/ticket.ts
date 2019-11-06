@@ -7,11 +7,10 @@ import { NumberFormatStyle, CurrencyPipe } from '@angular/common';
 export class ticket {
     service: string;
     price: number;
+    total: number;
 }
 
-export class invoiceTotal {
-    sum: string;
-    invoiceTotal: number;
-}
+
+
 
 // end program

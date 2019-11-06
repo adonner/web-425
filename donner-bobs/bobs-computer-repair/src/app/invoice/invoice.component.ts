@@ -11,13 +11,11 @@ import { DatePipe } from '@angular/common';
 })
 export class InvoiceComponent implements OnInit {
   services: [];
-  totalOrder: [];
   today: number = Date.now();
   
 
   constructor(private dialogRef: MatDialogRef<InvoiceComponent>, @Inject(MAT_DIALOG_DATA) data) {
       this.services = data.ticket;
-      this.totalOrder = data.invoiceTotal;
   }
 
   ngOnInit() {
